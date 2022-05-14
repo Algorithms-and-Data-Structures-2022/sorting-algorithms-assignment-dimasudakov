@@ -12,7 +12,7 @@ namespace assignment {
    * @return индекс середины области
    */
   inline constexpr int middle_of(int start, int stop) {
-    return start + (stop - start) / 2;
+    return (start + stop) >> 1;
   }
 
   /**
