@@ -17,11 +17,11 @@ namespace assignment {
       return;
     }
 
-    // вычисляем индекс опорного элемента ... median_of_three ...
-    int pivot_index = -1 /* напишите здесь свой код ... */;
+    int pivot_index = median_of_three(arr, start, stop);
 
-    // производим разбиение относительно опорного элемента ...  partition ...
-    // рекурсивно повторяем процедуру над левой и правой частью ...
+    pivot_index = partition(arr, start, stop, pivot_index);
+    quick_sort(arr, start, pivot_index - 1);
+    quick_sort(arr, pivot_index + 1, stop);
   }
 
 }  // namespace assignment
